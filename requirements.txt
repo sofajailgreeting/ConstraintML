@@ -1,0 +1,14 @@
+# Convenience file for local development environments and tooling that expects
+# requirements.txt (e.g. dependency graphs, some CI/hosting integrations).
+# pyproject.toml's [project.dependencies] / [project.optional-dependencies] is
+# the authoritative dependency spec for the published package -- keep this in
+# sync with it rather than editing versions here independently.
+
+torch>=2.0
+
+# Dev / test tooling (constraintml[dev])
+pytest>=7
+
+# Optional extras -- uncomment as needed, or use `pip install -e ".[nvidia,viz]"`
+# pynvml>=11.5.0    # real NVIDIA GPU telemetry (constraintml[nvidia])
+# matplotlib>=3.7   # example charts (constraintml[viz])

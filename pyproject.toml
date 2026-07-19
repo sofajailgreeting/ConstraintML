@@ -1,0 +1,58 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "constraintml"
+version = "0.1.0"
+description = "A constraint-aware layer that wraps existing ML training frameworks to reduce energy/carbon costs and support budgetary compliance."
+readme = { file = "README.md", content-type = "text/markdown" }
+license = "MIT"
+requires-python = ">=3.9"
+authors = [
+    { email = "ercoleluke@gmail.com" },
+]
+keywords = [
+    "pytorch",
+    "machine-learning",
+    "sustainability",
+    "carbon",
+    "energy",
+    "green-ai",
+    "mlops",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+dependencies = [
+    "torch>=2.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/sofajailgreeting/ConstraintML"
+Repository = "https://github.com/sofajailgreeting/ConstraintML"
+Issues = "https://github.com/sofajailgreeting/ConstraintML/issues"
+
+[project.optional-dependencies]
+nvidia = ["pynvml>=11.5.0"]
+viz = ["matplotlib>=3.7"]
+dev = ["pytest>=7"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+constraintml = ["py.typed"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

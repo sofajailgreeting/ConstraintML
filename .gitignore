@@ -1,0 +1,41 @@
+# Claude Code - used for testing and cleaning up code
+CLAUDE.md
+
+# Python bytecode / caches
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Packaging / build artifacts
+*.egg-info/
+build/
+dist/
+wheels/
+*.egg
+.eggs/
+MANIFEST
+
+# PyPI credentials -- never commit these
+.pypirc
+.env
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Test / tool caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Generated example output
+examples/*.png
+
+# Editor / OS cruft
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
